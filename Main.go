@@ -18,7 +18,10 @@ func checkErr(err error) {
 }
 
 func init() {
-	db, err = sql.Open("mysql", "bronson:none@/Text_Comparison?charset=utf8")
+	//db, err = sql.Open("mysql", "bronson:none@/Text_Comparison?charset=utf8")
+	db, err = sql.Open(
+		"mysql",
+		"bronsonbdevost:lbcirva7@tcp(browndevost.cg1st7dar4im.eu-central-1.rds.amazonaws.com:3306)/Parallel_Text?charset=utf8")
 	checkErr(err)
 	db.SetMaxOpenConns(100)
 }
